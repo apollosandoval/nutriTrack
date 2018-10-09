@@ -1,0 +1,13 @@
+.container {
+    padding: 0 0.5rem;
+    margin: 0 auto;
+    max-width: 100% !important;
+    width: 98% !important;
+}
+
+#profile-page-header .card-profile-image {
+    width: 150px;
+    position: absolute;
+    margin: 0;
+    left: 40px;
+}
