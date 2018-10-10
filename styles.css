@@ -5,6 +5,12 @@
     width: 98% !important;
 }
 
+#profile-page-header .card-image {
+    height: 300px;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
 #profile-page-header .card-profile-image {
     width: 150px;
     position: absolute;
