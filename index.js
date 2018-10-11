@@ -2,11 +2,11 @@ let instantURL = 'https://trackapi.nutritionix.com/v2/search/instant';
 let nutrientURL = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
 
 let restaurantSearch = document.querySelector('#restaurant_search');
+let submit = document.querySelector('#submit-foods');
 
 
 // event handlers
 let instantSearch = function (e) {
-    console.log('running search')
     fetch(instantURL+`?query=${e.target.value}`, {
         headers: {
             'x-app-id': `${API_ID}`,
@@ -34,13 +34,7 @@ let instantSearch = function (e) {
         .catch ( (error) => {
             console.log(error);
         })
-};
-
-function values(obj) {
-    for (let key in obj) {
-        return obj[key];
-    }
-}
+};  // end of instantSearch()
 
 let isThisOn = function (e) {
     console.log(e.target.value);
@@ -48,3 +42,4 @@ let isThisOn = function (e) {
 
 // event listeners
 restaurantSearch.addEventListener('input', instantSearch);
+submit.addEventListener('click', postFoods);

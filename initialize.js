@@ -20,6 +20,7 @@ $(document).ready(function () {
 // Initialize Autocomplete
 $(document).ready(function () {
     autocompleteInput = M.Autocomplete.init(document.querySelector('input.autocomplete'), {
-        data: {}
+        data: {},
+        onAutocomplete: postFoods
     });
 });
