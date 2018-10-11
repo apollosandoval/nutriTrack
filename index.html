@@ -155,64 +155,60 @@
                         </div>
                     </div>
                 </div>
-                <!-- Meal Form -->
-                <div class="row">
-                    <ul class="tabs">
-                        <li class="tab col s4 offset-s2">
-                            <a class="active" href="#form1">Dining Out</a>
-                        </li>
-                        <li class="tab col s4">
-                            <a href="#form2">Eating In</a>
-                        </li>
-                    </ul>
-                    <form id="form1" class="col s8 offset-s2">
-                        <div class="row">
-                            <div class="input-field col s8 offset-s2">
-                                <i class="material-icons prefix">search</i>
-                                <input placeholder="Search Restaurants" id="restaurant_search" type="text">
-                                <label for="search"></label>
-                            </div>
-                        </div>
-                    </form>
-                    <form id="form2" class="col s8 offset-s2">
-                        <div class="row">
-                            <div class="input-field col s8 offset-s2">
-                                <input placeholder="Enter An Item" id="item_search_1" type="text">
-                                <label for="item_search">Item 1</label>
-                            </div>
-                            <div class="input-field col s8 offset-s2">
-                                <input placeholder="Enter An Item" id="item_search_2" type="text">
-                                <label for="item_search">Item 2</label>
-                            </div>
-                            <div class="input-field col s8 offset-s2">
-                                <input placeholder="Enter An Item" id="item_search_3" type="text">
-                                <label for="item_search">Item 3</label>
-                            </div>
-                            <div class="col s8 offset-s2 center-align">
-                                <button class="btn waves-effect waves-light red" type="submit" name="action">Submit
-                                    <i class="material-icons right">send</i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <!-- Create Meal Card Button -->
-                <div class="fixed-action-btn toolbar">
+                <!-- Meal Modal Form -->
+                <!-- Modal Trigger -->
+                <div class="fixed-action-btn">
                     <!-- Button Icon -->
-                    <a id="add" class="btn-floating btn-large red">
+                    <a id="add" class="btn-floating btn-large modal-trigger red" href="#modal-form">
                         <i class="large material-icons">add</i>
                     </a>
-                    <!-- FAB Toolbar -->
-                    <ul>
-                        <li class="col s6">
-                            <a href="#">Dining Out</a>
-                        </li>
-                        <li class="col s6">
-                            <a href="#">Home Cooked</a>
-                        </li>
-                    </ul>
-                    <!-- <div id="tab1" class="col s12">Tab 1</div>
-                    <div id="tab2" class="col s12">Tab 2</div> -->
+                </div>
+                <!-- Modal Structure -->
+                <div id="modal-form" class="modal">
+                    <div class="modal-content">
+                        <div class="row">
+                            <ul class="tabs">
+                                <li class="tab col s6">
+                                    <a class="active" href="#form1">Dining Out</a>
+                                </li>
+                                <li class="tab col s6">
+                                    <a href="#form2">Eating In</a>
+                                </li>
+                            </ul>
+                            <form id="form1" class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">search</i>
+                                        <input placeholder="Search Restaurants" id="restaurant_search" type="text">
+                                        <label for="search"></label>
+                                    </div>
+                                </div>
+                            </form>
+                            <form id="form2" class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input placeholder="Enter An Item" id="item_search_1" type="text">
+                                        <label for="item_search">Item 1</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input placeholder="Enter An Item" id="item_search_2" type="text">
+                                        <label for="item_search">Item 2</label>
+                                    </div>
+                                    <div class="input-field col s12">
+                                        <input placeholder="Enter An Item" id="item_search_3" type="text">
+                                        <label for="item_search">Item 3</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col s8 offset-s2 center-align">
+                            <button class="btn waves-effect waves-light red" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <!-- Create Hover featureDiscovery (add after core functionality) -->
                 <!-- <div class="tap-target-wrapper open">
