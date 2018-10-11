@@ -17,6 +17,11 @@ $(document).ready(function () {
     $('.modal').modal();
 });
 
+// Initialize Select Dropdown
+$(document).ready(function () {
+    $('select').formSelect();
+});
+
 // Initialize Autocomplete
 $(document).ready(function () {
     autocompleteInput = M.Autocomplete.init(document.querySelector('input.autocomplete'), {

@@ -14,13 +14,13 @@ let instantSearch = function (e) {
             'x-remote-user-id': '0'
         }
     })
-        .then( (response) => {
+        .then((response) => {
             if (response.ok) {
                 return response.json();
             }
             throw new Error(`${response.statusText}`)
         })
-        .then( jsonObj => {
+        .then(jsonObj => {
             console.log(`${jsonObj.branded[0].food_name}`)
             autocompleteInput.updateData({
                 [`${jsonObj.branded[0].food_name}`]: null,
@@ -31,15 +31,14 @@ let instantSearch = function (e) {
                 [`${jsonObj.common[2].food_name}`]: null
             });
         })
-        .catch ( (error) => {
+        .catch((error) => {
             console.log(error);
         })
 };  // end of instantSearch()
 
 let isThisOn = function (e) {
-    console.log(e.target.value);
+    console.log(e);
 }
 
 // event listeners
 restaurantSearch.addEventListener('input', instantSearch);
-submit.addEventListener('click', postFoods);

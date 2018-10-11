@@ -1,6 +1,5 @@
 let postFoods = function (e) {
-    e.preventDefault();
-    // console.log(restaurantSearch.value);
+    // console.log(e);
     fetch(nutrientURL, {
         method: "POST",
         headers: {
@@ -10,7 +9,16 @@ let postFoods = function (e) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "query": "banana"
+            "query": `${e}`
         })
     })
+        .then( response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error(`${error.statusText}`);
+        })
+        .catch( error => {
+            console.log(error);
+        })
 };  // end of postFoods()
