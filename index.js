@@ -3,6 +3,7 @@ let nutrientURL = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
 
 let restaurantSearch = document.querySelector('#restaurant_search');
 let submit = document.querySelector('#submit-foods');
+let contentWrapper = document.querySelector('.wrapper');
 
 
 // event handlers
@@ -36,9 +37,64 @@ let instantSearch = function (e) {
         })
 };  // end of instantSearch()
 
+let publishCard = function (e) {
+    // e.preventDefault();
+    console.log('we are creating an element');
+    let mealCard = document.createElement('div');
+    
+    mealCard.setAttribute('class', 'row');
+    // mealCard.innerHTML = '<p>This is creating a paragraph</p>';
+    mealCard.innerHTML = `<div class="col s8 offset-s2">
+                        <div class="card horizontal">
+                            <!-- Meal Card Logo -->
+                            <div class="card-image activator">
+                                <!-- Insert Image or Restaurant Logo -->
+                                <i class="large material-icons activator">local_dining</i>
+                            </div>
+                            <!-- Meal Card Content -->
+                            <div class="card-stacked">
+                                <!-- Meal Name -->
+                                <div class="card-content activator">
+                                    <div class="card-title center-align activator">Meal 1</div>
+                                </div>
+                                <!-- Meal Data -->
+                                <div class="card-content activator">
+                                    <div class="col s6 center-align activator">
+                                        <h4 class="card-title activator">kCal</h4>
+                                    </div>
+                                    <div class="col s6 activator">
+                                        <div class="row activator">
+                                            <div class="col s12 activator">
+                                                <h4 class="card-title grey activator">G Protein</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row activator">
+                                            <div class="col s12 activator">
+                                                <h4 class="card-title activator">G Carbs</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row activator">
+                                            <div class="col s12 activator">
+                                                <h4 class="card-title grey activator">G Fat</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Reveal Nutrition Label -->
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+                    </div>`;
+    contentWrapper.appendChild(mealCard);
+};  // end of publishCard()
+
 let isThisOn = function (e) {
     console.log(e);
 }
 
 // event listeners
 restaurantSearch.addEventListener('input', instantSearch);
+submit.addEventListener('click', publishCard);

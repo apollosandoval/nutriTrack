@@ -10,8 +10,10 @@ let mealData = {
         { 'meal_title': 'snack' , 'contents': [{},{}],
         'lunch': {},
         'snack': {},
-        {'meal_title': 'snack', 'contents': [{}]},
-        'dinner': {},
+        },
+        {'meal_title': 'snack', 'contents': [{}],
+        'dinner': {}
+        }
     ]
 };
 
