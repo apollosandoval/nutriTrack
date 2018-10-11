@@ -1,3 +1,5 @@
+let autocompleteInput;
+
 // Initialize Fixed Action Button
 $(document).ready(function () {
     $('.fixed-action-btn').floatingActionButton({
@@ -13,4 +15,11 @@ $(document).ready(function () {
 // Initialize Modal
 $(document).ready(function () {
     $('.modal').modal();
+});
+
+// Initialize Autocomplete
+$(document).ready(function () {
+    autocompleteInput = M.Autocomplete.init(document.querySelector('input.autocomplete'), {
+        data: {}
+    });
 });
