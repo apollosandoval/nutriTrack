@@ -39,7 +39,17 @@ let instantSearch = function (e) {
 
 let publishCard = function (e) {
     e.preventDefault();
+    // create meal object for use in card
+    let meal = {};
     // gather inputs from form
+    if ($('#eatOut').hasClass('active')) {
+        // console.log($('#eatOutMealName option:checked').val())
+        meal['meal_name'] = $('#eatOutMealName option:checked').val();
+    } else if ($('#dineIn').hasClass('active')) {
+        meal['meal_name'] = $('#dineInMealName option:checked').val();
+    }
+    // add data from response object
+    meal['food_items'] = tempMealData[0];
     
     // to retrieve the data object use: tempMealData[0]
     let mealCard = document.createElement('div');
