@@ -1,41 +1,28 @@
-let mealData = {
-    '2018-10-11': {
-        'breakfast': [{}],
-        'lunch': [{},{},{}],
-        'snack': [{},{}],
-        'dinner': [{}],
-        'dessert': [{}],
-    },
-    '2018-10-10': [
-        { 'meal_title': 'snack' , 'contents': [{},{}],
-        'lunch': {},
-        'snack': {},
-        },
-        {'meal_title': 'snack', 'contents': [{}],
-        'dinner': {}
-        }
-    ]
-};
-
-let mealArray = [
-    {
-        'date': '2018-10-11',
-        [`${title}`]: {respObj}
-    },
-    {
-        'date': '2018-10-11',
-        [`${title}`]: { respObj }
-    }
+let tempMealData = [
+    {}, // response object
+    {},
+    {}
 ]
 
-
-let whatever = {
-    '2018-10-11': [
-        {breakfast},
-        {snack},
-        {snack},
+let mealData = {
+    'YYYY-MM-DD': [
+        {
+            'meal_name': 'breakfast',
+            'food_items': [{}]
+        },
+        {
+            'meal_name': 'lunch',
+            'food_items': [{}]
+        }
+    ],
+    'YYYY-MM-DD': [
+        {
+            'meal_name': 'breakfast',
+            'food_items': [{}]
+        },
+        {
+            'meal_name': 'lunch',
+            'food_items': [{}]
+        }
     ]
 }
-
-
-console.log(mealData['2018-10-10'][])

@@ -1,6 +1,6 @@
 let instantURL = 'https://trackapi.nutritionix.com/v2/search/instant';
 let nutrientURL = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
-
+// retrieve important elements
 let restaurantSearch = document.querySelector('#restaurant_search');
 let submit = document.querySelector('#submit-foods');
 let contentWrapper = document.querySelector('.wrapper');
@@ -38,8 +38,10 @@ let instantSearch = function (e) {
 };  // end of instantSearch()
 
 let publishCard = function (e) {
-    // e.preventDefault();
-    // to retrieve the object use: tempMealData[0]
+    e.preventDefault();
+    // gather inputs from form
+    
+    // to retrieve the data object use: tempMealData[0]
     let mealCard = document.createElement('div');
     
     mealCard.setAttribute('class', 'row');
@@ -64,17 +66,17 @@ let publishCard = function (e) {
                                     <div class="col s6 activator">
                                         <div class="row activator">
                                             <div class="col s12 activator">
-                                                <h4 class="card-title grey activator">G Protein</h4>
+                                                <h4 class="card-title center-align grey activator">G Protein</h4>
                                             </div>
                                         </div>
                                         <div class="row activator">
                                             <div class="col s12 activator">
-                                                <h4 class="card-title activator">G Carbs</h4>
+                                                <h4 class="card-title center-align activator">G Carbs</h4>
                                             </div>
                                         </div>
                                         <div class="row activator">
                                             <div class="col s12 activator">
-                                                <h4 class="card-title grey activator">G Fat</h4>
+                                                <h4 class="card-title center-align grey activator">G Fat</h4>
                                             </div>
                                         </div>
                                     </div>
