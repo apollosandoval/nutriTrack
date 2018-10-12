@@ -90,7 +90,6 @@ let publishCard = function (e) {
                         </div>
                     </div>`;
     $(mealCard).insertBefore('#modal-start');
-    // contentWrapper.appendChild(mealCard);
 };  // end of publishCard()
 
 let isThisOn = function (e) {
