@@ -1,3 +1,5 @@
+let tempMealData = [{}];
+
 let postFoods = function (e) {
     // console.log(e);
     fetch(nutrientURL, {
@@ -17,6 +19,11 @@ let postFoods = function (e) {
                 return response.json();
             }
             throw new Error(`${error.statusText}`);
+        })
+        .then( data => {
+            console.log(data);
+            tempMealData[0] = data['foods'][0];
+            // console.log(tempMealData);
         })
         .catch( error => {
             console.log(error);

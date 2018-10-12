@@ -15,14 +15,14 @@ let instantSearch = function (e) {
             'x-remote-user-id': '0'
         }
     })
-        .then((response) => {
+        .then( response => {
             if (response.ok) {
                 return response.json();
             }
             throw new Error(`${response.statusText}`)
         })
         .then(jsonObj => {
-            console.log(`${jsonObj.branded[0].food_name}`)
+            // console.log(`${jsonObj.branded[0].food_name}`)
             autocompleteInput.updateData({
                 [`${jsonObj.branded[0].food_name}`]: null,
                 [`${jsonObj.branded[1].food_name}`]: null,
@@ -39,11 +39,10 @@ let instantSearch = function (e) {
 
 let publishCard = function (e) {
     // e.preventDefault();
-    console.log('we are creating an element');
+    // to retrieve the object use: tempMealData[0]
     let mealCard = document.createElement('div');
     
     mealCard.setAttribute('class', 'row');
-    // mealCard.innerHTML = '<p>This is creating a paragraph</p>';
     mealCard.innerHTML = `<div class="col s8 offset-s2">
                         <div class="card horizontal">
                             <!-- Meal Card Logo -->
